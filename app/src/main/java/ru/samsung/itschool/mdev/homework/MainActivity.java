@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public EditText InputA, InputB, InputC;
@@ -23,9 +24,30 @@ public class MainActivity extends AppCompatActivity {
             InputC = findViewById(R.id.c);
             ResOutput = findViewById(R.id.res);
 
-            final double a = Double.parseDouble(String.valueOf(InputA.getText()));
-            final double b = Double.parseDouble(String.valueOf(InputB.getText()));
-            final double c = Double.parseDouble(String.valueOf(InputC.getText()));
+            double a;
+            double b;
+            double c;
+
+            try {
+                a = Double.parseDouble(String.valueOf(InputA.getText()));
+            } catch (Exception e) {
+                Toast.makeText(this, "Вы не ввели «a»", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            try {
+                b = Double.parseDouble(String.valueOf(InputB.getText()));
+            } catch (Exception e) {
+                Toast.makeText(this, "Вы не ввели «b»", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            try {
+                c = Double.parseDouble(String.valueOf(InputC.getText()));
+            } catch (Exception e) {
+                Toast.makeText(this, "Вы не ввели «c»", Toast.LENGTH_LONG).show();
+                return;
+            }
 
             if (a == 0 && b == 0 && c == 0) {
                 ResOutput.setText("any");

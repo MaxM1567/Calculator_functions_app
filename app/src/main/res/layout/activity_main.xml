@@ -17,21 +17,21 @@
         android:id="@+id/a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/a"
+        android:hint="@string/default_a"
         android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/b"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/b"
+        android:hint="@string/default_b"
         android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/c"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/c"
+        android:hint="@string/default_c"
         android:minHeight="48dp" />
 
     <Button
